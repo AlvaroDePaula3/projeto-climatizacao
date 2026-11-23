@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+:root{
+    --vivoType: "Vivo Type";
+    --bg-pagina: #F5E8FA;
+    --texto-principal: #1c1c1e;
+}
+
+#navBarUniversal
+{
+    background-color: #660099;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navegacaoDoMenu{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    list-style: none;
+}
+
+#tituloNavBar{
+    font-family: 'Varela Round', sans-serif;
+    color: #ffffff;
+    margin-left: 20px;
+}
+
+.botaoNavegacao{
+    background-color: #660099;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 5vh;
+    width: 8vw;
+    margin-right: 10px;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.botaoNavegacao:hover{
+    background-color: #b493ed;
+    transition: 0.5s;
+    transform: translateY(-3px);
+    color:#000000;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.botoesDashboard{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top:10px;
+}
+
+/* Configurações para os botões do filtro do dashboard */
+.filtroDashboard{
+    width: 15vw;
+    height: 12vh;
+    font-size: 20px;
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: #eaeaea;
+    color: #000000;
+    border-radius: 15px;
+    text-align: center;
+    padding: 12px;
+    transition: 0.3s;
+    flex-wrap: wrap ;
+}
+
+.filtroDashboard:hover{
+    border-left: 1px solid #660099 ;
+    transform: translateY(-3px);
+    transition: 0.3s;
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.nomeSpan{
+    font-size: 15px;
+}
+
+body{
+    background-color:#d2dcf0;
+    background-image: radial-gradient(#000000 1.5px, transparent 1.5px);
+    background-size: 25px 25px;
+}
+
+.dashboardCard{
+    width: 95%;
+    max-width: 1500px;
+
+    margin: 30px auto;
+
+    background: #ffffff;
+
+    border-radius: 30px;
+
+    padding: 30px;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.20);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.dashboardCard::before{
+    content:"";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        135deg,
+        #660099,
+        transparent,
+        #660099
+    );
+
+    opacity: .08;
+
+    pointer-events: none;
+}
+
+.cabecalhoDashboard{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.dashboardFiltros{
+    display: flex;
+    gap: 15px;
+}
+
+.filtroDashboard select{
+    width: 220px;
+
+    width: 45px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #f4f4f4;
+
+    padding-left: 10px;
+
+    cursor: pointer;
+}
+
+.containerDoGraficoDashboard
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    background: #fafafa;
+    border-radius: 20px;
+    min-height: 450px;
+    height: 520px;
+}
+
+.graficoWrapper
+{
+    width: 80%;
+    min-width: 320px;
+    height: 380px;
+    position:relative;
+}
+
+.dashboardFiltros select{
+    height: 40px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+}

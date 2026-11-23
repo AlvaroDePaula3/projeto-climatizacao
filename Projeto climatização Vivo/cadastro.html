@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climatização</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+
+    <nav id="navBarUniversal">
+        <h3 id="tituloNavBar"> Portal de Cadastro de Climatização</h3>
+
+            <ul class="navegacaoDoMenu">
+                <li> 
+                    <a href="painel.html">
+                        <button class="botaoNavegacao"> Painel </button>
+                    </a>
+                </li>
+                <li>
+                    <a href="inventário.html">
+                        <button class="botaoNavegacao"> <b> inventário</b> </button>
+                    </a>
+                </li>
+                <li>
+                    <a href="cadastro.html">
+                        <button class="botaoNavegacao"> <b> Cadastro</b> </button>
+                    </a>
+                </li>
+            </ul>
+    </nav>
+    <main class="paginaPrincipal">
+        <form action="" method="post">
+            <div class="divisoriaFormulario">
+                <label for="estacao">Estação: </label>
+                <input type="text">
+            </div>
+            <div class="divisoriaFormulario">
+                <label for="regiao">Região: </label>
+                <select name="dropdownRegiao" id="dropdownRegiao">
+                    <option value="EspiritoSanto"> Espírito Santo </option>
+                    <option value="Estrategica"> Estratégica </option>
+                    <option value="Interior"> Interior </option>
+                    <option value="Metropolitana"> Metropolitana </option>
+                </select>
+            </div>
+            <div class="divisoriaFormulario">
+                <label for="tipoEquipamento"> Tipo de Equipamento: </label>
+                <select name="tipoEquipamento" id="tipoEquipamento">
+                    <option value="splitPrecisao"> SPLIT DE PRECISÃO </option>
+                    <option value="splitConforto"> SPLIT DE CONFORTO </option>
+                </select>
+            </div>
+            
+            <div class="divisoriaFormulario">
+                <label for="EquipamentosCriticos"> Equipamentos críticos atendidos: </label>
+                <input type="text" name="equipamentosCriticos" id="equipamentosCriticos">
+            </div>
+            <div class="divisoriaFormulario">
+                <label for="joiaDaCoroa">Jóia da Coroa: </label>
+                <input type="checkbox" name="joiaDaCoroa" id="joiaDaCoroa">
+                <br>
+                <br>
+                <label for="prioridade"> Prioridade: </label>
+                <select name="prioridade" id="prioridade">
+                    <option value="anel"> Anel </option>
+                    <option value="joiaDaCoroa"> Joia da coroa</option>
+                    <option value="colar"> Colar </option>
+                    <option value="HL3"> HL3 </option>
+                    <option value="HL4"> HL4 </option>
+                    <option value="olt"> OLT </option>
+                    <option value="demais"> Demais </option>
+                    <option value="pendente"> Pendente </option>
+                </select>
+            </div>
+            <div class="divisoriaFormulario">
+                <label for="responsabilidadeManutencao"> Responsabilidade de manutenção: </label>
+                <select name="responsabilidadeManutencao" id="responsabilidadeManutencao">
+                    <option value="verificar">A verificar </option>
+                    <option value="telTotal"> TEL (total) </option>
+                    <option value="epsViaFatB"> EPS via FAT-B </option>
+                </select>
+            </div>
+            <div class="divisoriaFormulario">
+                <label for="demandaMensal"> Sob demanda / mensal </label>
+                <select name="demandaMensal" id="demandaMensal">
+                    <option value="sobDemanda"> Sob demanda</option>
+                    <option value="mensal"> Mensal </option>
+                </select>
+            </div>
+            <div class="divisoriaFormulario">
+                <label for="observacoes"> Observações </label>
+                <textarea type="text" rows="6" name="observacao"></textarea>
+            </div>
+            <div>
+                <button class="botaoSalvar"> Salvar </button>
+                <button class="botaoLimpar"> Limpar </button>
+            </div>
+        </form>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

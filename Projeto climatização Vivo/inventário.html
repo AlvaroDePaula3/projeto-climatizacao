@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climatização</title>
+    <link rel="stylesheet" href="inventario.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+
+    <nav id="navBarUniversal">
+        <h3 id="tituloNavBar"> Portal de Cadastro de Climatização</h3>
+            <ul class="navegacaoDoMenu">
+                <li> 
+                    <a href="painel.html">
+                        <button class="botaoNavegacao"> Painel </button>
+                    </a>
+                </li>
+                <li>
+                    <a href="inventário.html">
+                        <button class="botaoNavegacao">  Inventário</button>
+                    </a>
+                </li>
+                <li>
+                    <a href="cadastro.html">
+                        <button class="botaoNavegacao">  Cadastro</button>
+                    </a>
+                </li>
+            </ul>
+    </nav>
+
+    <div class="fundoInventario">
+        <div class="quadradoInventario">
+            <div class="atividadeInventario">
+                <input class="classeDropdown campoBusca" type="search" name="procurarInventario" id="procurarInventario" placeholder="Buscar estação, ambiente, equipamento crítico,...">
+                <!-- Dropdown das regiões -->
+                <select class="classeDropdown" name="dropdownRegiao" id="dropdownRegiao">
+                    <option value="EspiritoSanto"> Espírito Santo </option>
+                    <option value="Estrategica"> Estratégica </option>
+                    <option value="Interior"> Interior </option>
+                    <option value="Metropolitana"> Metropolitana </option>
+                </select>
+
+                <!-- Dropdown das classes -->
+                 <select class="classeDropdown" name="dropdownClasses" id="dropdownClasses">
+                    <option value=""> SPLIT </option>
+                    <option value=""> SELF </option>
+                    <option value=""> ACJ </option>
+                    <option value=""> CHILLER </option>
+                    <option value=""> FANCOIL </option>
+                 </select>
+
+                 <!-- Dropdown das prioridades-->
+                  <select class="classeDropdown" name="dropdownPrioridades" id="dropdownPrioridades">
+                    <option value=""> Anel </option>
+                    <option value=""> Colar </option>
+                    <option value=""> Joia da coroa </option>
+                    <option value=""> HL3 </option>
+                    <option value=""> HL4 </option>
+                    <option value=""> OLT </option>
+                    <option value=""> Demais </option>
+                    <option value=""> Pendente </option>
+                  </select>
+
+                  <!-- Dropdown das responsabilidades -->
+                   <select class="classeDropdown" name="dropdownResponsabilidades" id="dropdownResponsabilidades">
+                        <option value=""> TEL (total) </option>
+                        <option value=""> EPS via FAT-B </option>
+                        <option value=""> A verificar </option>
+                   </select>
+
+                   <label class="caixaGabinete" for="gabinete">
+                       <input type="checkbox" name="checkboxGabinete" id="checkboxGabinete">
+                        <span>Só gabinete </span>                    
+                    </label>
+
+                    <button class="botaoImportarXlsx" id="btnDispararInput"> Importar dados xlsx</button>
+                    <input type="file" id="inputExcelOculto" accept=".xlsx, .xls" style="display: none;">
+            </div>
+            <div class="divisoriaTabela">
+                <table class="tabelaInventario">
+                    <thead>
+                        <tr>
+                            <th> ESTAÇÃO </th>
+                            <th> REGIÃO </th>
+                            <th> CLASSE </th>
+                            <th> TIPO </th>
+                            <th> AMBIENTE </th>
+                            <th> CRÍTICOS ATENDIDOS </th>
+                            <th> PRIORIDADE </th>
+                            <th> RESPONSABILIDADE </th>
+                            <th>   </th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+    <main class="divisoriaAplicacao" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        
+        
+    </main>
+    -->
+
+    <script src="inventario.js"></script>
+</body>
+</html>

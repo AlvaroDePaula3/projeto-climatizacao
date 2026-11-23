@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climatização</title>
+    <link rel="stylesheet" href="painel.css">
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <nav id="navBarUniversal">
+        <h3 id="tituloNavBar"> Portal de Cadastro de Climatização</h3>
+            <ul class="navegacaoDoMenu">
+                <li> 
+                    <a href="painel.html">
+                        <button class="botaoNavegacao"> Painel </button>
+                    </a>
+                </li>
+                <li>
+                    <a href="inventário.html">
+                        <button class="botaoNavegacao">  Inventário</button>
+                    </a>
+                </li>
+                <li>
+                    <a href="cadastro.html">
+                        <button class="botaoNavegacao">  Cadastro</button>
+                    </a>
+                </li>
+            </ul>
+    </nav>
+
+    <div class="botoesDashboard">
+        <button class="filtroDashboard">
+             0 <br>
+            <span class="nomeSpan">Equipamentos </span>  </button>
+
+        <button class="filtroDashboard"> 
+            0 <br>
+            <span class="nomeSpan">Sites </span> 
+        </button>
+        
+        <button class="filtroDashboard">
+            0 <br>
+            <span class="nomeSpan">Em gabinete </span> </button>
+
+        <button class="filtroDashboard">
+            0 <br>
+            <span class="nomeSpan">Sem tipo (SPLIT/SELF) </span> </button>
+            
+        <button class="filtroDashboard">
+            0 <br>
+            <span class="nomeSpan">Sem críticos atendidos </span></button>
+
+        <button class="filtroDashboard">
+            0 <br>
+            <span class="nomeSpan">Prioridade pendente </span></button>
+    </div>
+
+    <div class="dashboardCard">
+        <div class="cabecalhoDashboard">
+            <h2> Dashboard de Climatização</h2>
+            <div class="dashboardFiltros">
+                
+                <label for="coordenacao">Equipamentos por coordenação: </label>
+                <select id="coordenacao">
+                    <option value="todos"> Mensal e Sob Demanda</option>
+                    <option value="Mensal"> Mensal </option>
+                    <option value="sobDemanda"> sob demanda </option>
+                </select>
+
+                <label for="tipoEquipamento">Tipo: </label>
+                <select id="tipoEquipamento">
+                    <option value="SPLIT" selected>SPLIT</option>
+                    <option value="SELF">SELF</option>
+                    <option value="ACJ">ACJ</option>
+                    <option value="CHILLER">CHILLER</option>
+                    <option value="FANCOIL">FANCOIL</option>
+                    <option value="TODOS">TODOS</option>
+                </select>
+                
+            </div>
+        </div>
+          
+        <div class="containerDoGraficoDashboard">
+            <div class="graficoWrapper">
+                <canvas id="graficoRegioes"></canvas>
+            </div>
+            <div class="graficoWrapper">
+                <canvas id="segundoGrafico"></canvas>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <script src="painel.js"></script>
+</body>
+</html>
